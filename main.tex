@@ -1,0 +1,140 @@
+\documentclass[10pt,letterpaper]{article}
+\usepackage[
+    ignoreheadfoot,
+    top=1cm,
+    bottom=1cm,
+    left=1cm,
+    right=1cm,
+    footskip=1cm
+]{geometry}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{xcolor}
+
+\newcommand{\datedsection}[2]{\section[#1]{#1 \hfill #2}}
+\newcommand{\datedsubsection}[2]{\subsection[#1]{#1 \hfill #2}}
+\newcommand{\name}[1]{\centerline{\Huge{#1}}}
+\newcommand{\contact}[1]{\centerline{#1}}
+\newcommand{\sep}{{\large\textperiodcentered}}
+
+\definecolor{basecolor}{cmyk}{0,0,0,0.8}
+\definecolor{emphcolor}{cmyk}{0,0,0,1.0}
+\color{basecolor}
+\renewcommand{\emph}[1]{{\color{emphcolor}\bfseries#1}}
+
+\titleformat{\section}
+    {\Large\scshape\raggedright}
+    {}
+    {0em}
+    {}
+    [\titlerule]
+    
+\titleformat{\subsection}
+    {\large\raggedright}
+    {}
+    {0em}
+    {}
+    
+\titlespacing{\section}{0pt}{2pt}{2pt}    
+
+\titlespacing{\subsection}{0pt}{0pt}{0pt}
+
+\setlist{nolistsep,noitemsep,leftmargin=1.5em}
+    
+\begin{document}
+
+\name{Jianchen Zhao}
+\contact{\href{mailto:jianchen.zhao@uwaterloo.ca}{jianchen.zhao@uwaterloo.ca} \sep{} \href{tel:+15147265029}{+1 (524) 726-5029} \sep{} \href{https://github.com/bolu61}{github.com/bolu61} \sep{} \href{https://orcid.org/0000-0002-6362-0106}{orcid.org/0000-0002-6362-0106}}
+
+\section{Education}
+
+\datedsubsection{\emph{McGill University}}{2017 to 2020}
+\noindent B.Sc. in Honours Computer Science with a Minor in Mathematics \emph{3.6/4 GPA}
+
+\datedsubsection{\emph{University of Waterloo}}{2021 to present}
+\noindent \emph{Ph.D.} in Electrical and Computer Engineering \emph{3.9/4 GPA}
+
+\section{Publications}
+
+\subsection{Practical Preprocessing of Logs at Scale}
+\noindent ICSE 2025 Doctoral Symposium.
+\begin{itemize}
+    \item Doctoral Thesis work in progress, with a proposal accepted at ICSE 2025 Doctoral Symposium.
+    \item I develop new methods to preprocess large scale and distributed
+    software logs for storage and analysis, such as \emph{entropy} based
+    log-parser and console log segmentation using \emph{Transformers}.
+    \item Uses a combination of the latest technique in \emph{AI}, including
+    \emph{Machine Learning} (interleaved hidden Markov models) and \emph{Deep
+    Learning} (recurrent neural networks, transformers, LLMs) implemented using
+    \emph{Python} \emph{JAX} and \emph{PyTorch}.
+\end{itemize}
+
+\datedsubsection{Studying and Complementing the Use of Identifiers in Logs}{2023}
+\noindent J Zhao, Y Tang, S Sunil, W Shang. IEEE International Conference on Software Analysis, Evolution and Reengineering (SANER), Taipa, Macao,
+2023 pp. 97-107.
+\begin{itemize}
+    \item Exploration of the relationship of logging statements in complex
+    software systems using \emph{static program analysis} and data flow analysis.
+    \item Implemented \emph{SCNA} to compute dominator trees of logging statement \emph{CFG} nodes.
+    \item Performed \emph{empirical study} and case study across many open-source
+    projects to determine the relationship of logging statements.
+\end{itemize}
+
+\section{Experience}
+
+\datedsubsection{Morgan Stanley (Technology Analyst)}{2018}
+\begin{itemize}
+    \item Implemented a \emph{data warehousing} system for managing internal messaging and \emph{VoIP} QA data. 
+    \item Designed a \emph{full stack} application to generate reports into
+    dashboards, using \emph{Python} as a backend.
+    \item Worked on a based \emph{AI} chat bot framework using \emph{Python} for
+    internal message channels.
+\end{itemize}
+
+\datedsubsection{Wind River (Researcher)}{2023 to 2024}
+\begin{itemize}
+    \item Developed automotive \emph{data driven testing} framework, reducing testing cost by 80\%.
+    \item Used \emph{Python}
+    \item Used novel approach by leveraging system requirement graph and
+    \emph{NSGA-III} genetic search to find optimal test set.
+    \item Engineered features from system requirement graph and trained dozens of cross validated
+    \emph{Machine Learning Models} for ranking testing priorities.
+\end{itemize}
+
+\section{Projects}
+\subsection{Prefixspan github.com/bolu61/prefixspan}
+\begin{itemize}
+    \item Implemented the classic \verb|prefixspan| algorithm using \emph{C++20}
+    with \emph{Python} bindings with a c++20 concept based generic interface.
+\end{itemize}
+\subsection{Deepspan github.com/bolu61/deepspan}
+\begin{itemize}
+    \item Designed a pattern matching algorithm to perform sequencing of interleaved events.
+    \item Uses both traditionnal \emph{machine learning models} such as a
+    mixture of \emph{hidden Markov models} and \emph{deep learning} models based
+    on \emph{LSTM}, \emph{Transformers} and \emph{GRU}s.
+\end{itemize}
+
+\datedsubsection{HackTheNorth \href{https://devpost.com/software/snapevnt}{devpost.com/software/snapevnt}}{2018}
+\begin{itemize}
+    \item Designed and implemented a realtime chat application with \emph{AI} powered
+    event management tools using Android SDK.
+\end{itemize}
+\datedsubsection{Hackatown \href{https://devpost.com/software/sureviews}{devpost.com/software/sureviews}}{2019}
+\begin{itemize}
+    \item Designed and implemented an \emph{AI} restaurant review summarization
+    tool utilizing GCP \emph{NLP} API.
+\end{itemize}
+\datedsubsection{McHacks \href{https://devpost.com/software/utrition}{devpost.com/software/utrition}}{2019}
+\begin{itemize}
+    \item Designed and implemented an \emph{AI} food Ingredient analyzer that
+    uses \emph{image-to-text} models to analyze ingredients list on food
+    packaging.
+\end{itemize}
+
+\section{Skills}
+\vspace{1pt}
+\noindent \emph{C++20}, \emph{Python}, \emph{JAX}, \emph{PyTorch}, rust, C, AI, Machine Learning, LLM, RAG, SQL, Linux, Git, Empirical Research, Full Stack Development, Static Analysis
+
+\end{document}
